@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ../practice && npm run build && cp -r dist ../practice_backend", 
-    "deploy:full" : "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "deploy:full" : "npm config set script-shell \"C:\\Program Files\\git\\bin\\bash.exe\" && npm run build:ui && git add . && git commit -m uibuild && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nagendra",
