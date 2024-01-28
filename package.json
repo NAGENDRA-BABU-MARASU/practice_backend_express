@@ -6,15 +6,18 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:ui": "rm -rf dist && cd ../practice && npm run build && cp -r dist ../practice_backend", 
-    "deploy:full" : "npm config set script-shell \"C:\\Program Files\\git\\bin\\bash.exe\" && npm run build:ui && git add . && git commit -m uibuild && git push",
+    "build:ui": "rm -rf dist && cd ../practice && npm run build && cp -r dist ../practice_backend",
+    "deploy:full:windows": "npm config set script-shell \"C:\\Program Files\\git\\bin\\bash.exe\" && npm run build:ui && git add . && git commit -m uibuild && git push",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nagendra",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
